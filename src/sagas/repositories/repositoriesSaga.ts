@@ -14,10 +14,10 @@ function* loadRepositories(action: LoadRepositoriesAction) {
   yield put(setRepositories({ loading: true, error: false }));
   try {
     const result = yield fetch(
-      `https://api.github.com/search/repositories?q=${action.search}%20in:full_name+org:kraftvaerk&` +
+      `https://api.github.com/search/repositories?q=${action.search}%20in:name+org:kraftvaerk&` +
         new URLSearchParams({
           //Search results should be sorted alphabetically in an ascending order
-          sort: "full_name",
+          sort: "name",
         })
     );
     const data = yield result.json();

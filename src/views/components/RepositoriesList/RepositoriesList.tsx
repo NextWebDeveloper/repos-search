@@ -14,7 +14,7 @@ const RepositoriesList = () => {
   );
 
   return repositoriesList?.length ? (
-    <StyledRepositoriesList className="w-full">
+    <StyledRepositoriesList className="w-full absolute top-18 left-0">
       {repositoriesList.map((repo) => (
         <RepositoriesListComponent repo={repo} key={repo.id} />
       ))}

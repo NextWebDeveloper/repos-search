@@ -11,7 +11,11 @@ module.exports = {
       },
       transparent: "transparent",
     },
-    extend: {},
+    extend: {
+      inset: {
+        18: "4.5rem",
+      },
+    },
   },
   variants: {
     extend: {},

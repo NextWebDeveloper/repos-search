@@ -1,4 +1,11 @@
-import React, { useState, useEffect, useMemo, useCallback } from "react";
+// @ts-ignore
+import React, {
+  useState,
+  useEffect,
+  useMemo,
+  useCallback,
+  useImperativeHandle,
+} from "react";
 import styled from "styled-components";
 import { ReactComponent as SearchIcon } from "@assets/icons/search-icon.svg";
 import { ReactComponent as SpinnerIcon } from "@assets/icons/spinner-icon.svg";
@@ -14,7 +21,7 @@ const Form = styled.form`
   border-radius: 24px;
 `;
 
-const SearchForm = () => {
+const SearchForm = React.forwardRef<any, HTMLFormElement>((props, ref) => {
   const [search, setSearch] = useState<string>("");
   const [inputFocused, setInputFocused] = useState<boolean>(false);
 
@@ -56,19 +63,14 @@ const SearchForm = () => {
     setInputFocused(true);
   };
 
-  const handleInputBlur = (): void => {
-    setInputFocused(false);
-    // TODO: do we really need to clear results onBlur ?
-    // using Timeout here to handle click on repo link before link disappeares
-    setTimeout(() => {
-      clearSearch();
-    }, 200);
-  };
-
   const clearSearch = (): void => {
     setSearch("");
     setEmptyRepositoriesList();
   };
+
+  useImperativeHandle(ref, () => ({
+    clearSearch,
+  }));
 
   return (
     <Form
@@ -85,7 +87,6 @@ const SearchForm = () => {
         value={search}
         onChange={handleSearchChange}
         onFocus={handleInputFocus}
-        onBlur={handleInputBlur}
         placeholder="Type anything..."
       />
       {repositoriesLoading ? (
@@ -97,6 +98,6 @@ const SearchForm = () => {
       )}
     </Form>
   );
-};
+});
 
 export default SearchForm;
