@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/repos-search/static/css/main.53002e4a.chunk.css",
+    "main.js": "/repos-search/static/js/main.09573f6f.chunk.js",
+    "main.js.map": "/repos-search/static/js/main.09573f6f.chunk.js.map",
+    "runtime-main.js": "/repos-search/static/js/runtime-main.3de5ea4a.js",
+    "runtime-main.js.map": "/repos-search/static/js/runtime-main.3de5ea4a.js.map",
+    "static/js/2.a8b4aa8c.chunk.js": "/repos-search/static/js/2.a8b4aa8c.chunk.js",
+    "static/js/2.a8b4aa8c.chunk.js.map": "/repos-search/static/js/2.a8b4aa8c.chunk.js.map",
+    "index.html": "/repos-search/index.html",
+    "static/css/main.53002e4a.chunk.css.map": "/repos-search/static/css/main.53002e4a.chunk.css.map",
+    "static/js/2.a8b4aa8c.chunk.js.LICENSE.txt": "/repos-search/static/js/2.a8b4aa8c.chunk.js.LICENSE.txt",
+    "static/media/cross-icon.5c66f0a3.svg": "/repos-search/static/media/cross-icon.5c66f0a3.svg",
+    "static/media/repo-icon.25573fa2.svg": "/repos-search/static/media/repo-icon.25573fa2.svg",
+    "static/media/search-icon.030be502.svg": "/repos-search/static/media/search-icon.030be502.svg",
+    "static/media/spinner-icon.c48af12b.svg": "/repos-search/static/media/spinner-icon.c48af12b.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3de5ea4a.js",
+    "static/js/2.a8b4aa8c.chunk.js",
+    "static/css/main.53002e4a.chunk.css",
+    "static/js/main.09573f6f.chunk.js"
+  ]
+}
