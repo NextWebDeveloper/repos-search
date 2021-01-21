@@ -13,8 +13,6 @@ const RepositoriesList = () => {
     (state: RootState) => state.repositories.data
   );
 
-  console.log(repositoriesList);
-
   return repositoriesList?.length ? (
     <StyledRepositoriesList className="w-full">
       {repositoriesList.map((repo) => (
