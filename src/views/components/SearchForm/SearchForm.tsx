@@ -72,8 +72,8 @@ const SearchForm = () => {
 
   return (
     <Form
-      className={`h-12 bg-grey-light border-2 border-${
-        inputFocused ? "accent" : "grey"
+      className={`h-12 bg-grey-light border-2 ${
+        inputFocused ? "border-accent" : "border-grey"
       } w-full flex items-center p-4`}
     >
       <button>
