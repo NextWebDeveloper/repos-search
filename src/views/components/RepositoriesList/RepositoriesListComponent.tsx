@@ -41,7 +41,7 @@ const RepositoriesListComponent: FC<Props> = ({ repo }) => {
   return (
     <Link
       className="flex items-center  bg-grey-light hover:bg-accent py-4 text-dark cursor-pointer leading-none"
-      href={repo.url}
+      href={repo.html_url}
       target="_blank"
     >
       <StyledRepoIcon />

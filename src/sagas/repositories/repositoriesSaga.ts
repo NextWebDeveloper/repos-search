@@ -1,29 +1,21 @@
 import { all, put, takeLatest } from "redux-saga/effects";
 
-import {
-  LOAD_REPOSITORIES,
-  LoadRepositoriesAction,
-} from "@store/repositories/types";
+import { LOAD_REPOSITORIES, Repository } from "@store/repositories/types";
 import { setRepositories } from "@store/repositories/actions";
 
 function* repositoriesSaga() {
   yield all([takeLatest(LOAD_REPOSITORIES, loadRepositories)]);
 }
 
-function* loadRepositories(action: LoadRepositoriesAction) {
+function* loadRepositories() {
   yield put(setRepositories({ loading: true, error: false }));
   try {
-    const result = yield fetch(
-      `https://api.github.com/search/repositories?q=${action.search}%20in:name+org:kraftvaerk&` +
-        new URLSearchParams({
-          //Search results should be sorted alphabetically in an ascending order
-          sort: "name",
-        })
-    );
+    const result = yield fetch("https://api.github.com/orgs/kraftvaerk/repos");
     const data = yield result.json();
-    yield put(
-      setRepositories({ loading: false, data: data.items, error: false })
+    const sorted = data.sort((repoA: Repository, repoB: Repository) =>
+      repoA.name.toLocaleLowerCase() > repoB.name.toLocaleLowerCase() ? 1 : -1
     );
+    yield put(setRepositories({ loading: false, data: sorted, error: false }));
   } catch (e) {
     yield put(
       setRepositories({

@@ -6,9 +6,8 @@ import {
   LOAD_REPOSITORIES,
 } from "./types";
 
-export const loadRepositories = (search: string): LoadRepositoriesAction => ({
+export const loadRepositories = (): LoadRepositoriesAction => ({
   type: LOAD_REPOSITORIES,
-  search: search,
 });
 
 export const setRepositories = (

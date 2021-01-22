@@ -1,7 +1,7 @@
 export interface Repository {
   id: number;
   name: string;
-  url: string;
+  html_url: string;
 }
 
 export interface SystemState {
@@ -20,5 +20,4 @@ export interface SetRepositoriesAction {
 
 export interface LoadRepositoriesAction {
   type: typeof LOAD_REPOSITORIES;
-  search: string;
 }
