@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/repos-search/static/css/main.48938d68.chunk.css",
-    "main.js": "/repos-search/static/js/main.c7e3ad07.chunk.js",
-    "main.js.map": "/repos-search/static/js/main.c7e3ad07.chunk.js.map",
+    "main.js": "/repos-search/static/js/main.b2843c9b.chunk.js",
+    "main.js.map": "/repos-search/static/js/main.b2843c9b.chunk.js.map",
     "runtime-main.js": "/repos-search/static/js/runtime-main.3de5ea4a.js",
     "runtime-main.js.map": "/repos-search/static/js/runtime-main.3de5ea4a.js.map",
-    "static/js/2.a8b4aa8c.chunk.js": "/repos-search/static/js/2.a8b4aa8c.chunk.js",
-    "static/js/2.a8b4aa8c.chunk.js.map": "/repos-search/static/js/2.a8b4aa8c.chunk.js.map",
+    "static/js/2.275fd4d9.chunk.js": "/repos-search/static/js/2.275fd4d9.chunk.js",
+    "static/js/2.275fd4d9.chunk.js.map": "/repos-search/static/js/2.275fd4d9.chunk.js.map",
     "index.html": "/repos-search/index.html",
     "static/css/main.48938d68.chunk.css.map": "/repos-search/static/css/main.48938d68.chunk.css.map",
-    "static/js/2.a8b4aa8c.chunk.js.LICENSE.txt": "/repos-search/static/js/2.a8b4aa8c.chunk.js.LICENSE.txt",
+    "static/js/2.275fd4d9.chunk.js.LICENSE.txt": "/repos-search/static/js/2.275fd4d9.chunk.js.LICENSE.txt",
     "static/media/cross-icon.5c66f0a3.svg": "/repos-search/static/media/cross-icon.5c66f0a3.svg",
     "static/media/repo-icon.25573fa2.svg": "/repos-search/static/media/repo-icon.25573fa2.svg",
     "static/media/search-icon.030be502.svg": "/repos-search/static/media/search-icon.030be502.svg",
@@ -17,8 +17,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.3de5ea4a.js",
-    "static/js/2.a8b4aa8c.chunk.js",
+    "static/js/2.275fd4d9.chunk.js",
     "static/css/main.48938d68.chunk.css",
-    "static/js/main.c7e3ad07.chunk.js"
+    "static/js/main.b2843c9b.chunk.js"
   ]
 }
