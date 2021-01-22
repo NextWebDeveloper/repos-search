@@ -28,7 +28,7 @@ const RepositoriesList: React.FC<Props> = ({ search }) => {
       return;
     }
     const filtered = repositoriesList.filter((repo: Repository) =>
-      repo.name.includes(search)
+      repo.name.toLowerCase().includes(search.toLowerCase())
     );
     setFilteredRepositories(filtered);
   }, [search]);

@@ -13,7 +13,7 @@ function* loadRepositories() {
     const result = yield fetch("https://api.github.com/orgs/kraftvaerk/repos");
     const data = yield result.json();
     const sorted = data.sort((repoA: Repository, repoB: Repository) =>
-      repoA.name.toLocaleLowerCase() > repoB.name.toLocaleLowerCase() ? 1 : -1
+      repoA.name.toLowerCase() > repoB.name.toLowerCase() ? 1 : -1
     );
     yield put(setRepositories({ loading: false, data: sorted, error: false }));
   } catch (e) {
